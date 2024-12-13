@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca Komik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Baca Komik</h1>
+    </header>
+    <main>
+        <div class="reader">
+            <img src="https://via.placeholder.com/600x800" alt="Halaman Komik">
+        </div>
+        <div class="navigation">
+            <button onclick="prevPage()">Sebelumnya</button>
+            <button onclick="nextPage()">Berikutnya</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 KomikKita</p>
+    </footer>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 5; // Ganti dengan jumlah halaman komik
+
+        function updatePage() {
+            const img = document.querySelector(".reader img");
+            img.src = `https://via.placeholder.com/600x800?text=Halaman+${currentPage}`;
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePage();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePage();
+            }
+        }
+    </script>
+</body>
+</html>

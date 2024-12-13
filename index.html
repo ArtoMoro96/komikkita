@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KomikKita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di KomikKita</h1>
+    </header><form id="search-form">
+    <input type="text" id="search-input" placeholder="Cari komik..." />
+    <button type="button" onclick="searchComic()">Cari</button>
+</form>
+    <main>
+        <section id="komik">
+            <h2>Komik Populer</h2>
+            <div class="komik-list">
+                <div>
+                    <img src="https://via.placeholder.com/150" alt="Komik 1">
+                    <p>Judul: Komik 1</p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/150" alt="Komik 2">
+                    <p>Judul: Komik 2</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 KomikKita</p>
+    </footer>
+<script>
+    function searchComic() {
+        const input = document.getElementById("search-input").value.toLowerCase();
+        const comics = document.querySelectorAll(".komik-list div");
+
+        comics.forEach(comic => {
+            const title = comic.querySelector("p").textContent.toLowerCase();
+            if (title.includes(input)) {
+                comic.style.display = "block";
+            } else {
+                comic.style.display = "none";
+            }
+        });
+    }
+</script></body>
+</html><div class="komik-list">
+    <div>
+        <img src="https://via.placeholder.com/150" alt="Komik 1">
+        <p>Judul: Komik 1</p>
+        <a href="baca.html">Baca Sekarang</a>
+    </div>
+</div>
