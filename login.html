@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Masuk ke Akun Anda</h1>
+    </header>
+    <main>
+        <form id="login-form">
+            <label for="login-username">Nama Pengguna:</label>
+            <input type="text" id="login-username" required>
+            
+            <label for="login-password">Kata Sandi:</label>
+            <input type="password" id="login-password" required>
+            
+            <button type="button" onclick="login()">Masuk</button>
+        </form>
+        <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 KomikKita</p>
+    </footer>
+
+    <script>
+        function login() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            const user = JSON.parse(localStorage.getItem('user'));
+
+            if (user && user.username === username && user.password === password) {
+                alert('Login berhasil! Selamat datang, ' + username);
+                localStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'index.html';
+            } else {
+                alert('Nama pengguna atau kata sandi salah!');
+            }
+        }
+    </script>
+</body>
+</html>

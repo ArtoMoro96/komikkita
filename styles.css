@@ -31,4 +31,109 @@ footer {
     background-color: #333;
     text-align: center;
     padding: 10px;
+}form {
+    margin: 20px 0;
+    text-align: center;
+}
+form input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+form button {
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #666;
+}#genre {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#genre ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#genre button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#genre button:hover {
+    background-color: #666;
+}
+
+#komik-list div {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}#komik-list div {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+}
+
+#komik-list img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}.rating span {
+    font-size: 20px;
+    cursor: pointer;
+    color: gold;
+}
+.rating span:hover {
+    color: darkorange;
+}body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
 }

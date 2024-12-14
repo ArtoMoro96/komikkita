@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registrasi Akun</h1>
+    </header>
+    <main>
+        <form id="register-form">
+            <label for="username">Nama Pengguna:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Kata Sandi:</label>
+            <input type="password" id="password" required>
+            
+            <button type="button" onclick="register()">Daftar</button>
+        </form>
+        <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 KomikKita</p>
+    </footer>
+
+    <script>
+        function register() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                localStorage.setItem('user', JSON.stringify({ username, password }));
+                alert('Registrasi berhasil! Silakan login.');
+                window.location.href = 'login.html';
+            } else {
+                alert('Harap isi semua kolom!');
+            }
+        }
+    </script>
+</body>
+</html>
